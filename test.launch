@@ -1,0 +1,13 @@
+<launch>
+  <node name="rviz_my_name" pkg="rviz" type="rviz" args="-d /home/marcin/.rviz/smr_navigation_with_map.rviz"/> 
+
+  <!-- <node name="map_sever_my_name" pkg="map_server" type="map_server" args="/home/marcin/map.yaml"/> -->
+  
+  <include file="$(find hello_ros)/launch/smr_navigation.launch" />
+
+  <include file="$(find qr_detector)/launch/detector.launch" />
+
+  <include file="$(find hello_ros)/launch/qr_visp.launch" />
+
+
+</launch>
